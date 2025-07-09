@@ -1,0 +1,26 @@
+# Eclipse
+.classpath
+.project
+.settings/
+ 
+# Intellij
+.idea/
+*.iml
+*.iws
+ 
+# Mac
+.DS_Store
+ 
+# Maven
+log/
+target/
+.mvn/wrapper/
+.m2
+.mvn/
+
+# Java 
+*.class
+*.jar
+*.zip
+*.tar.gz
+${env.REPO_HOME}
