@@ -24,3 +24,6 @@ target/
 *.zip
 *.tar.gz
 ${env.REPO_HOME}
+
+#HAR files
+*.har
