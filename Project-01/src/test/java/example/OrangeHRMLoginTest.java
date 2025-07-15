@@ -10,12 +10,12 @@ import static io.gatling.javaapi.http.HttpDsl.*;
 
 public class OrangeHRMLoginTest extends Simulation {
 
-  private HttpProtocolBuilder httpProtocol = http
+  private final HttpProtocolBuilder httpProtocol = http
     .baseUrl("https://opensource-demo.orangehrmlive.com")
     .inferHtmlResources(AllowList(), DenyList(".*\\.js", ".*\\.css", ".*\\.gif", ".*\\.jpeg", ".*\\.jpg", ".*\\.ico", ".*\\.woff", ".*\\.woff2", ".*\\.(t|o)tf", ".*\\.png", ".*\\.svg", ".*detectportal\\.firefox\\.com.*"))
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36");
   
-  private Map<CharSequence, String> headers_0 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_0 = Map.ofEntries(
     Map.entry("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -30,13 +30,13 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_1 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_1 = Map.ofEntries(
     Map.entry("sec-ch-ua", "Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138"),
     Map.entry("sec-ch-ua-mobile", "?0"),
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_6 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_6 = Map.ofEntries(
     Map.entry("Accept", "application/json"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -51,7 +51,7 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_8 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_8 = Map.ofEntries(
     Map.entry("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -67,7 +67,7 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_12 = Map.ofEntries(
+  private final  Map<CharSequence, String> headers_12 = Map.ofEntries(
     Map.entry("Accept", "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -80,7 +80,7 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_13 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_13 = Map.ofEntries(
     Map.entry("Accept", "application/json"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -93,7 +93,7 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_14 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_14 = Map.ofEntries(
     Map.entry("Accept", "application/json, text/plain, */*"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -105,7 +105,7 @@ public class OrangeHRMLoginTest extends Simulation {
     Map.entry("sec-ch-ua-platform", "Windows")
   );
   
-  private Map<CharSequence, String> headers_15 = Map.ofEntries(
+  private final Map<CharSequence, String> headers_15 = Map.ofEntries(
     Map.entry("Accept", "application/json"),
     Map.entry("Accept-Encoding", "gzip, deflate, br, zstd"),
     Map.entry("Accept-Language", "en-US,en;q=0.9"),
@@ -119,7 +119,7 @@ public class OrangeHRMLoginTest extends Simulation {
   );
 
 
-  private ScenarioBuilder scn = scenario("OrangeHRMLoginTest")
+  private final ScenarioBuilder scn = scenario("OrangeHRMLoginTest")
     .exec(
       http("request_0")
         .get("/web/index.php/auth/login")
